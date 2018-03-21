@@ -1,4 +1,4 @@
-<h1>新規投稿</h1>
+<h1>編集</h1>
 <!-- form_forを定義 -->
 <%= form_for(@blog) do |f| %>
 
@@ -14,6 +14,6 @@
     <h4>画像</h4>
   	<%= f.attachment_field :blog_image%>
 
-    <%= f.submit '投稿' %>
+    <%= f.submit '編集を保存' %>
 <!-- submitしたらcreateに飛ぶ -->
 <% end %>

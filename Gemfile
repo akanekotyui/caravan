@@ -19,6 +19,12 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+#heroku
+gem "pg", group: :production
+
+#debug
+gem 'pry-rails'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -29,6 +35,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+#画像投稿機能
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+#画像のサイズ調整機能
+gem "refile-mini_magick"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -40,7 +40,8 @@
         <% @blogs.each do |t| %>
           <div class="blog-item clearfix">
             <!-- <img class="blog-image" src="img/forest.jpg"> -->
-            <%= image_tag "img/forest.jpg", class: "blog-image" %>
+            <!-- 第一引数にローカルの回している変数、第二引数にカラム名 -->
+            <%= attachment_image_tag t, :blog_image, :fill, 100, 100, format: 'jpeg' %>
             <section class="blog-text">
               <h3 class="blog-text-headline">
 <!--                <%= link_to t.title, blog_path(t) %> -->

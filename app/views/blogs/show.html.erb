@@ -46,17 +46,18 @@
               </p>
               <p class="blog-date">
               <%= @blog.created_at %>
-          </p>
             </div>
 
               <div class="single_image"></div>
+              <%= attachment_image_tag @blog, :blog_image %>
               <p class="single_text">
                 <%= @blog.body %>
               </p>
-
-          <a href="#">編集</a>
-          <a href="#">削除</a>
-
+              <!-- 名前付きパスとHTTPメソッドで判断する  -->
+          <%= link_to '編集', edit_blog_path(@blog) %>
+          <!-- link_toメソッドはデフォルトでHTTPメソッドがget -->
+          <!-- form_forメソッドはデフォルトでHTTPメソッドがpost -->
+          <%= link_to "削除", blog_path(@blog), method: :delete %>
           <div class="author_case clearfix">
             <div class="author_image"></div>
               <div class="author_box">

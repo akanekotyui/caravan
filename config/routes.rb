@@ -1,15 +1,10 @@
 Rails.application.routes.draw do
-  get 'blogs/create'
+	#urlを何も指定していない時の初期画面を設定
+  root "blogs#index"
 
-  get 'blogs/new'
+  #routes.rbで定義したルーティングはターミナルでrake routesと打つと確認できる
+  #resouceはshow, editなど有名なルーティングは勝手に定義してくれる
+  resources :blogs
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get '/blogs' => 'blogs#index'
-  get '/blogs/new' => 'blogs#new'
 
-  #form_forの行き先を定義
-  post '/blogs' => 'blogs#create'
-  post '/blogs' =>'blogs#index'
-
-  get '/blogs/:id' => 'blogs#show', as: 'blog'
 end
